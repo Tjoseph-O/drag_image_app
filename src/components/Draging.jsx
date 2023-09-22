@@ -61,11 +61,14 @@ function Draging() {
                     return <Picture url={picture.url} id={picture.id} />;
                 })}
             </div>
+
+                <div className="board-container">
             <div className="Board" ref={drop}>
                 {board.map((picture) => {
                     return <Picture url={picture.url} id={picture.id} />;
                 })}
             </div>
+                </div>
 
                 </div>
         </>

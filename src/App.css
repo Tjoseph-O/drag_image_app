@@ -18,7 +18,8 @@
 
 .Pictures {
   /*margin: 10px;*/
-  width: 100px;
+  width: fit-content;
+  margin: auto;
   border-width: 10px;
   border-radius: 50px;
   /*border-style: solid;*/
@@ -36,17 +37,22 @@ img {
   width: 300px;
   height: 500px;
   border: 2px solid black;
-  background-color: beige;
+  background-color: darkslategrey;
+}
+.board-container{
+  width: fit-content;
+  margin: auto;
 }
 
 .main{
   align-content: center;
   justify-content: center;
   text-align: center;
-  width: 60vw;
+  margin-top: 7rem;
   height: 40vh;
   border-radius: 20px;
   background-color: rgba(255,255,255, 0.3);
+
 
 }
 
@@ -65,7 +71,7 @@ label{
 
 }
 input{
-  width: 40%;
+  /*width: 40%;*/
   border-radius: 20px;
   height: 20%;
   padding: 12px 12px;
@@ -83,7 +89,7 @@ input{
 }
 
 .main button{
-  width: 20%;
+  /*width: 20%;*/
   padding: 12px 12px;
   margin: 5px 0;
   background: forestgreen;
@@ -97,7 +103,45 @@ input{
 .drag-class{
   align-items: center;
   align-content: center;
-  background-color: blanchedalmond;
+  background-color: dimgrey;
+  margin: auto;
 }
+@media (max-width: 750px) {
+  .Pictures{
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .header{
+    font-size: 18px;
+  }
+  label{
+    font-size: 14px;
+
+  }
+  input{
+    height: 1rem;
+  }
+  .main button{
+    font-size: 14px;
+  }
+  form{
+    margin-top: 1rem;
+  }
+  
+}
+@media (max-width: 412px) {
+  .main{
+    width: 80%;
+    margin: 5rem auto;
+  }
+  .main button{
+    font-size: 12px;
+  }
+}
+
+
+
 
 
