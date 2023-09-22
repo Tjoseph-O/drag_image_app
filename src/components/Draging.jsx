@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Picture from "./Picture";
 import { useDrop } from "react-dnd";
 import "../App.css";
+import {useNavigate} from "react-router-dom";
+import "./auth/SignIn";
+import {signInWithEmailAndPassword} from "firebase/auth";
+import auth from "./Firebase";
 
 
 
@@ -48,10 +52,17 @@ function Draging() {
             isOver: !!monitor.isOver(),
         }),
     }));
+    const navigate = useNavigate();
 
     const addImageToBoard = (id) => {
         const pictureList = PictureList.filter((picture) => id === picture.id);
         setBoard((board) => [...board, pictureList[0]]);
+    };
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+          navigate("/")
     };
     return (
         <>
@@ -69,6 +80,8 @@ function Draging() {
                 })}
             </div>
                 </div>
+
+                <button onClick={handleSubmit}>Log out</button>
 
                 </div>
         </>
